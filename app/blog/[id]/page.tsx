@@ -9,20 +9,20 @@ async function getData(id: string) {
   return response.json();
 }
 
-// type Props = {
-//   params: {
-//     id: string;
-//   };
-// };
+type Props = {
+  params: {
+    id: string;
+  };
+};
 
-export async function generateMetadata({ params: { id } }: any): Promise<Metadata> {
+export async function generateMetadata({ params: { id } }: Props): Promise<Metadata> {
   const post = await getData(id);
   return {
     title: post.title
   };
 }
 
-export default async function Post({ params: { id } }: any) {
+export default async function Post({ params: { id } }: Props) {
   const post = await getData(id);
   return (
     <>
