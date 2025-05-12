@@ -38,6 +38,9 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  --color-bg: rgba(183, 104, 7, 0.7);
+  --color-active: rgba(187, 45, 234, 0.7);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -105,3 +108,47 @@ a {
     color-scheme: dark;
   }
 }
+
+header {
+  min-height: 85px;
+  display: flex;
+  justify-content: center;
+}
+
+header a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--color-bg);
+}
+
+.container {
+  max-width: 900px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 0 auto;
+}
+
+h1, footer {
+  text-align: center;
+}
+
+main {
+  min-height: calc(100vh - 85px - 22px);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+main a {
+  text-decoration: none;
+  color: var(--color-bg);
+}
+
+main a:hover, header a:hover {
+  text-decoration: underline;
+}
+
+.active {
+  color: var(--color-active);
+  cursor: default;
+}
+
